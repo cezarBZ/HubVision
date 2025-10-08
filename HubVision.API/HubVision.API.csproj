@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HubVision.Application\HubVision.Application.csproj" />
+    <ProjectReference Include="..\HubVision.Domain\HubVision.Domain.csproj" />
+    <ProjectReference Include="..\HubVision.Infrastructure\HubVision.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

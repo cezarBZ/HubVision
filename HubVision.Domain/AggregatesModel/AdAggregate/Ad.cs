@@ -1,0 +1,27 @@
+﻿using HubVision.Domain.AggregatesModel.AdSetAggregate;
+using HubVision.Domain.Core.Models;
+
+namespace HubVision.Domain.AggregatesModel.AdAggregate
+{
+    public class Ad : TenantEntity<Guid>, IAggregateRoot
+    {
+        public string AdId { get; set; }
+        public string Name { get; set; }
+        public string Status { get; set; }
+
+        public string CreativeId { get; set; }
+        public string ImageUrl { get; set; }
+        public string VideoUrl { get; set; }
+        public string AdText { get; set; }
+        public string Headline { get; set; }
+        public string Description { get; set; }
+        public string CallToAction { get; set; }
+        public string LinkUrl { get; set; }
+
+        public Guid AdSetId { get; set; }
+        public AdSet AdSet { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+    }
+}

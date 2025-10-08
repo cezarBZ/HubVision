@@ -1,6 +1,6 @@
-﻿using CoreRun.Domain.Core.Models;
+﻿using HubVision.Domain.Core.Models;
 
-namespace CoreRun.Domain.Core.Models
+namespace HubVision.Domain.Core.Models
 {
     public abstract class Entity<TKey> where TKey : IEquatable<TKey>
     {
