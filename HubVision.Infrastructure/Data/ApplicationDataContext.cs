@@ -6,6 +6,7 @@ using HubVision.Domain.AggregatesModel.CampaingAggregate;
 using HubVision.Domain.AggregatesModel.ClientAggregate;
 using HubVision.Domain.AggregatesModel.PlatformAccountAggregate;
 using HubVision.Domain.AggregatesModel.TrafficManagerAggregate;
+using HubVision.Domain.Core.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 

@@ -6,6 +6,7 @@ namespace HubVision.Infrastructure.Data;
 public class UnitOfWork : IUnitOfWork
 {
     private readonly ApplicationDbContext _context;
+    public ApplicationDbContext Context => _context;
     private IDbContextTransaction _transaction;
 
     public UnitOfWork(ApplicationDbContext context)
