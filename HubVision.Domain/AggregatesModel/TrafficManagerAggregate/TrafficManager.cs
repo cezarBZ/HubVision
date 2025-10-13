@@ -1,4 +1,5 @@
-﻿using HubVision.Domain.AggregatesModel.ClientAggregate;
+﻿using HubVision.Domain.AggregatesModel.AdAccountAggregate;
+using HubVision.Domain.AggregatesModel.ClientAggregate;
 using HubVision.Domain.AggregatesModel.PlatformAccountAggregate;
 using HubVision.Domain.Core.Models;
 
@@ -18,6 +19,8 @@ namespace HubVision.Domain.AggregatesModel.TrafficManagerAggregate
 
         public ICollection<PlatformAccount> PlatformAccounts { get; set; }
         public ICollection<ClientAssignment> ClientAssignments { get; set; }
+        public ICollection<AdAccountAccess> AdAccountAccesses { get; set; }
+
 
         private TrafficManager()
         {

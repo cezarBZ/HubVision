@@ -5,10 +5,8 @@ namespace HubVision.Domain.AggregatesModel.AdAggregate
 {
     public class Ad : TenantEntity<Guid>, IAggregateRoot
     {
-        public string AdId { get; set; }
         public string Name { get; set; }
         public string Status { get; set; }
-
         public string CreativeId { get; set; }
         public string ImageUrl { get; set; }
         public string VideoUrl { get; set; }

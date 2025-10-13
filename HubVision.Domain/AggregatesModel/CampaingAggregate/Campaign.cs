@@ -6,7 +6,6 @@ namespace HubVision.Domain.AggregatesModel.CampaingAggregate
 {
     public class Campaign : TenantEntity<Guid>, IAggregateRoot
     {
-        public string CampaignId { get; set; }
         public string Name { get; set; }
         public string Objective { get; set; }
         public string Status { get; set; }

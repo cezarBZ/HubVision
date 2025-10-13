@@ -25,7 +25,6 @@ namespace HubVision.Domain.AggregatesModel.PlatformAccountAggregate
 
         public string PlatformMetadata { get; set; }
 
-        // Relacionamentos
         public ICollection<AdAccount> AdAccounts { get; set; }
 
         private PlatformAccount()

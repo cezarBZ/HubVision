@@ -6,7 +6,6 @@ namespace HubVision.Domain.AggregatesModel.AdSetAggregate
 {
     public class AdSet : TenantEntity<Guid>, IAggregateRoot
     {
-        public string AdSetId { get; set; }
         public string Name { get; set; }
         public string Status { get; set; }
         public decimal DailyBudget { get; set; }
