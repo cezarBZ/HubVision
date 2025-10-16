@@ -12,11 +12,6 @@ public class AdAccountConfiguration : IEntityTypeConfiguration<AdAccount>
 
         builder.HasKey(a => a.Id);
 
-        builder.Property(a => a.AdAccountId)
-            .IsRequired()
-            .HasMaxLength(100)
-            .HasComment("ID da conta de anúncios na plataforma (ex: act_123456)");
-
         builder.Property(a => a.AccountName)
             .IsRequired()
             .HasMaxLength(255)
@@ -53,7 +48,7 @@ public class AdAccountConfiguration : IEntityTypeConfiguration<AdAccount>
         builder.Property(a => a.LastSyncedAt)
             .HasComment("Data da última sincronização com a plataforma");
 
-        builder.HasIndex(a => new { a.AgencyId, a.AdAccountId })
+        builder.HasIndex(a => new { a.AgencyId, a.Id})
             .IsUnique()
             .HasDatabaseName("IX_AdAccounts_AgencyId_AdAccountId");
 

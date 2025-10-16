@@ -54,7 +54,8 @@ public class PlatformAccountConfiguration : IEntityTypeConfiguration<PlatformAcc
             .HasConversion<string>();
 
         builder.Property(p => p.PlatformMetadata)
-            .HasColumnType("jsonb");
+            .HasColumnType("jsonb")
+            .IsRequired(false);
 
         builder.HasIndex(p => new { p.AgencyId, p.TrafficManagerId })
             .HasDatabaseName("IX_PlatformAccounts_AgencyId_TrafficManagerId");

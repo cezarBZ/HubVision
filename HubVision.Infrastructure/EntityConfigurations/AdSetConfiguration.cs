@@ -64,6 +64,7 @@ public class AdSetConfiguration : IEntityTypeConfiguration<AdSet>
 
         builder.Property(a => a.TargetingJson)
             .HasColumnType("jsonb")
+            .IsRequired(false)
             .HasComment("Configuração de segmentação em JSON");
 
         builder.Property(a => a.OptimizationGoal)
