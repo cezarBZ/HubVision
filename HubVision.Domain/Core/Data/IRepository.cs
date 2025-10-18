@@ -7,6 +7,7 @@ public interface IRepository<T, TKey> : IDisposable where T : class
     IReadOnlyList<T> GetAll(Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy);
     Task<IReadOnlyList<T>> GetAllAsync(Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy);
     IReadOnlyList<T> Get(Expression<Func<T, bool>> predicate);
+    Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate);
     T? GetById(TKey id);
     Task<T?> GetByIdAsync(TKey id);
     void Add(T entity);

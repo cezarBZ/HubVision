@@ -37,6 +37,12 @@ public class Repository<T, TKey> : IRepository<T, TKey>
         return _context.Set<T>().Where(predicate).ToList();
     }
 
+    public async Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate)
+    {
+        return await _context.Set<T>().Where(predicate).ToListAsync();
+
+    }
+
     public T GetById(TKey id)
     {
         return _context.Set<T>().Find(id);
@@ -70,5 +76,6 @@ public class Repository<T, TKey> : IRepository<T, TKey>
         _context.Dispose();
         GC.SuppressFinalize(this);
     }
+
 }
 
