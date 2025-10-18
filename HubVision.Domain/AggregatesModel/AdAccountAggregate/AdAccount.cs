@@ -10,7 +10,6 @@ public class AdAccount : TenantEntity<Guid>, IAggregateRoot
     public Guid PlatformAccountId { get; set; }
     public PlatformAccount PlatformAccount { get; set; }
 
-    public string AdAccountId { get; set; }
     public string AccountName { get; set; }
     public string Currency { get; set; }
     public string TimeZone { get; set; }
@@ -36,7 +35,6 @@ public class AdAccount : TenantEntity<Guid>, IAggregateRoot
     public static AdAccount Create(
         Guid agencyId,
         Guid platformAccountId,
-        string adAccountId,
         string accountName,
         string currency,
         string timeZone)
@@ -45,7 +43,6 @@ public class AdAccount : TenantEntity<Guid>, IAggregateRoot
         {
             AgencyId = agencyId,
             PlatformAccountId = platformAccountId,
-            AdAccountId = adAccountId,
             AccountName = accountName,
             Currency = currency,
             TimeZone = timeZone,
