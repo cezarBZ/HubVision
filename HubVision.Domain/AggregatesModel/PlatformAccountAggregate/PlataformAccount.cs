@@ -23,7 +23,7 @@ namespace HubVision.Domain.AggregatesModel.PlatformAccountAggregate
         public DateTime ConnectedAt { get; set; }
         public DateTime? LastSyncedAt { get; set; }
 
-        public string PlatformMetadata { get; set; }
+        public string? PlatformMetadata { get; set; }
 
         public ICollection<AdAccount> AdAccounts { get; set; }
 
