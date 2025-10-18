@@ -13,7 +13,7 @@ namespace HubVision.Domain.AggregatesModel.AdSetAggregate
         public DateTime StartTime { get; set; }
         public DateTime? EndTime { get; set; }
 
-        public string TargetingJson { get; set; }
+        public string? TargetingJson { get; set; }
         public string OptimizationGoal { get; set; }
         public string BillingEvent { get; set; }
 
